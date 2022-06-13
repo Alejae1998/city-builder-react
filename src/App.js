@@ -11,9 +11,9 @@ import City from './City';
 function App() {
   // track some state here.
   // You'll need to keep track of a skylineId, waterfrontId, and castleId. All these start out as 1
-  const [skylineId, setSkylineId] = useState(1);
-  const [waterfrontId, setWaterfrontId] = useState(1);
-  const [castleId, setCastleId] = useState(1);
+  const [skylineId, setSkyline] = useState(1);
+  const [waterfrontId, setWaterfront] = useState(1);
+  const [castleId, setCastle] = useState(1);
   // you'll need to track a city name, which starts as the city name of your choice.
   const [cityName, setCityName] = useState('Portland');
   // finally, you'll need an array of slogans, which could start out as ['The City of Excellence'] for example
@@ -34,9 +34,9 @@ function App() {
           {/* 
           render all three Dropdown components (WaterfrontDropdown, SkylineDropdown, CastleDropdown) here.  In each Dropdown, pass as props the state handler functions defined above, so that these child components can manipulate parent state 
           */}
-          <WaterfrontDropdown setWaterfrontId={setWaterfrontId} />
-          <SkylineDropdown setSkylineId={setSkylineId} />
-          <CastleDropdown setCastleId={setCastleId} />
+          <WaterfrontDropdown setWaterfront={setWaterfront} />
+          <SkylineDropdown setSkyline={setSkyline} />
+          <CastleDropdown setCastle={setCastle} />
         </section>
         {/* here, the SloganForm component takes in the setSlogans state handler function and the slogans array that live in state */}
         <SloganForm setSlogans={setSlogans} slogans={slogans} />
